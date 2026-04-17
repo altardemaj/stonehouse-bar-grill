@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Stone House Website",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "5174", "--directory", "C:\\Users\\altar\\StoneHouseBarGrill"],
+      "port": 5174
+    }
+  ]
+}
