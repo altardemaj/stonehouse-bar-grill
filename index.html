@@ -215,38 +215,6 @@
     </div>
   </footer>
 
-  <!-- MOTHER'S DAY POPUP -->
-  <div id="md-overlay" class="md-overlay" role="dialog" aria-modal="true" aria-label="Mother's Day popup">
-    <div class="md-modal">
-      <button class="md-close" id="md-close" aria-label="Close">&times;</button>
-      <img src="images/mothersday.jpg" alt="Mother's Day at Stone House Bar & Grill" class="md-img" />
-      <div class="md-body">
-        <p class="md-tag">Sunday, May 10th</p>
-        <h2 class="md-title">Happy Mother's Day!</h2>
-        <p class="md-sub">Treat the special women in your life to an unforgettable dining experience at Stone House. Make your reservation now — tables fill fast!</p>
-        <a href="https://www.opentable.com/r/stone-house-grill-mahopac" target="_blank" rel="noopener" class="btn btn--gold md-btn">Reserve Your Table</a>
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-  <script>
-    (function () {
-      var overlay = document.getElementById('md-overlay');
-      var closeBtn = document.getElementById('md-close');
-      if (sessionStorage.getItem('md-dismissed')) return;
-      setTimeout(function () { overlay.classList.add('md-overlay--visible'); }, 1500);
-      closeBtn.addEventListener('click', function () {
-        overlay.classList.remove('md-overlay--visible');
-        sessionStorage.setItem('md-dismissed', '1');
-      });
-      overlay.addEventListener('click', function (e) {
-        if (e.target === overlay) {
-          overlay.classList.remove('md-overlay--visible');
-          sessionStorage.setItem('md-dismissed', '1');
-        }
-      });
-    })();
-  </script>
+  
 </body>
 </html>
