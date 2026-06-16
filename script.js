@@ -165,3 +165,28 @@ if (lightbox && lightboxImg) {
     if (Math.abs(dx) > 48) dx < 0 ? setImg(currentIdx + 1) : setImg(currentIdx - 1);
   });
 }
+
+/* ── FATHER'S DAY POPUP ───────────────────────────────────────── */
+(function () {
+  const overlay = document.getElementById('fdOverlay');
+  if (!overlay) return;
+
+  // Show between June 14 and June 21 (inclusive), once per session
+  const now   = new Date();
+  const month = now.getMonth(); // 0-based, June = 5
+  const day   = now.getDate();
+  const inWindow = month === 5 && day >= 14 && day <= 21;
+  if (!inWindow || sessionStorage.getItem('fd2025_seen')) return;
+
+  setTimeout(() => overlay.classList.add('md-overlay--visible'), 600);
+
+  function closePopup() {
+    overlay.classList.remove('md-overlay--visible');
+    sessionStorage.setItem('fd2025_seen', '1');
+  }
+
+  document.getElementById('fdClose').addEventListener('click', closePopup);
+  document.getElementById('fdDismiss').addEventListener('click', closePopup);
+  overlay.addEventListener('click', e => { if (e.target === overlay) closePopup(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closePopup(); });
+}());
