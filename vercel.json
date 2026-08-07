@@ -17,15 +17,6 @@
       ],
       "destination": "https://www.stonehouse-grill.com/:path*",
       "permanent": true
-    },
-    {
-      "source": "/:path*",
-      "has": [
-        { "type": "host", "value": "www.stonehouse-grill.com" },
-        { "type": "protocol", "value": "http" }
-      ],
-      "destination": "https://www.stonehouse-grill.com/:path*",
-      "permanent": true
     }
   ]
 }
