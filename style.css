@@ -219,6 +219,7 @@ address { font-style: normal; }
   height: 52px;
   width: auto;
   object-fit: contain;
+  background: #fff;
 }
 
 /* Nav links */
@@ -1353,6 +1354,7 @@ address { font-style: normal; }
   margin-inline: auto;
   margin-bottom: 18px;
   object-fit: contain;
+  background: #fff;
 }
 .footer-tagline {
   color: var(--gray-2);
@@ -1414,6 +1416,9 @@ address { font-style: normal; }
 .footer-contact-strip a:hover { color: var(--gold); }
 .footer-dot { color: var(--dark-5); font-size: 0.7rem; }
 .footer-copy { color: var(--dark-5); font-size: 0.72rem; }
+.footer-credit { color: var(--gray-2); font-size: 0.7rem; margin-top: 8px; }
+.footer-credit a { color: var(--gray); transition: color var(--dur) var(--ease); }
+.footer-credit a:hover { color: var(--gold); }
 
 /* ── FOCUS ────────────────────────────────────────────────────── */
 :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
