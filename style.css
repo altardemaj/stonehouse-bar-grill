@@ -1064,6 +1064,130 @@ address { font-style: normal; }
 .party-contact-dot { color: var(--dark-5); }
 
 /* ── JOBS PAGE ────────────────────────────────────────────────── */
+/* Visit and information sections */
+.visit-details-grid,
+.route-grid,
+.occasion-grid,
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.visit-card,
+.route-card,
+.occasion-card,
+.faq-item {
+  background: var(--dark-2);
+  border: 1px solid var(--dark-4);
+  border-radius: var(--radius);
+  padding: 32px;
+  transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+.visit-card:hover,
+.route-card:hover,
+.occasion-card:hover,
+.faq-item:hover {
+  border-color: var(--gold-border);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+}
+.visit-card h3,
+.route-card h3,
+.occasion-card h3,
+.faq-item h3 {
+  font-family: var(--font-h);
+  font-size: 1.18rem;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+.visit-card p,
+.route-card p,
+.occasion-card p,
+.faq-item p {
+  color: var(--gray);
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+.route-card .btn { margin-top: 22px; }
+.visit-address {
+  font-style: normal;
+  color: var(--gray);
+  font-size: 0.98rem;
+  line-height: 1.9;
+  margin-bottom: 28px;
+}
+.visit-address strong { color: var(--white); }
+.visit-address a { color: var(--gold); }
+.visit-address a:hover { color: var(--gold-light); }
+.content-list {
+  display: grid;
+  gap: 12px;
+  margin: 24px 0 32px;
+}
+.content-list li {
+  color: var(--gray);
+  padding-left: 20px;
+  position: relative;
+  line-height: 1.7;
+}
+.content-list li::before {
+  content: '\2014';
+  color: var(--gold);
+  position: absolute;
+  left: 0;
+}
+.section-note {
+  color: var(--gray-2);
+  font-size: 0.8rem;
+  line-height: 1.7;
+  margin-top: 22px;
+}
+.inline-utility {
+  border-top: 1px solid var(--dark-4);
+  border-bottom: 1px solid var(--dark-4);
+  padding: 34px 0;
+  background: var(--dark-2);
+}
+.inline-utility-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+.inline-utility h2 {
+  font-family: var(--font-h);
+  color: var(--white);
+  font-size: clamp(1.3rem, 2.4vw, 1.8rem);
+  margin-bottom: 6px;
+}
+.inline-utility p { color: var(--gray); font-size: 0.9rem; line-height: 1.7; }
+.inline-utility .btn { flex-shrink: 0; }
+.planning-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 64px;
+  align-items: start;
+}
+.planning-list {
+  background: var(--dark-2);
+  border: 1px solid var(--dark-4);
+  border-radius: var(--radius);
+  padding: 34px;
+}
+
+@media (max-width: 768px) {
+  .visit-details-grid,
+  .route-grid,
+  .occasion-grid,
+  .faq-grid,
+  .planning-grid { grid-template-columns: 1fr; }
+  .inline-utility-inner { align-items: flex-start; flex-direction: column; }
+  .visit-card,
+  .route-card,
+  .occasion-card,
+  .faq-item { padding: 26px 24px; }
+}
+
 .jobs-intro {
   max-width: 600px;
   margin-inline: auto;
